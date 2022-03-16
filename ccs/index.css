@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  /* #### Text */
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  /* Background gradient: */
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  /* ### Neutral */
+  /* #### Text */
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  /* #### Dividers */
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.2rem;
+  background: linear-gradient(var(--Soft-violet) ,var(--Soft-blue));
+}
+.wrapper{
+  background-color: #fff;
+  border-radius: 2.5rem;
+  width: 90rem;
+  height: 500px;
+  display: grid;
+  place-content: center;
+  grid-template-columns: 400px  1fr;
+  column-gap: 5rem;
+  background-image: url('../images/bg-pattern-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: 920% 65%;
+}
+.answer{
+  display: none;
+  margin-block-start: 1.5rem;
+  color: var(--Dark-grayish-blue);
+}
+.active .answer{
+  display: block;
+}
+.acordion__wrapper{
+  margin-right: 5rem;
+  margin-top: -2.5rem;
+}
+.questions__answer-acc{
+  padding-block: 1.5rem;
+  border-bottom: 0.15rem solid var(--Light-grayish-blue);
+}
+.title{
+  margin-block: 2rem;
+  font-size: 3.5rem;
+  color: var(--Very-dark-desaturated-blue); 
+}
+.question{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  color: var(--Dark-grayish-blue);
+  cursor: pointer;
+}
+.active .question{
+  color: var(--Very-dark-desaturated-blue);
+  font-weight: 700;
+}
+.active .question__icon{
+  transform: rotate(180deg);
+  transition: all 0.25s ease-in;
+}
+.image__wrapper{
+  position: relative;
+  height: 380px;
+}
+.image__wrapper--inner{
+  background: url('../images/illustration-woman-online-desktop.svg');
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position:120% center;
+}
+.image-box{
+  position: absolute;
+  top: 35%;
+  right: 75%;
+}
